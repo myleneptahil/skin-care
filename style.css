@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1024px;
+    margin: 0px auto;
+    padding: 0;
+    display:grid;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+
+.subtitle {
+    text-align:center;
+    display:block;
+    margin-top: 30px;
+    font-size: 30px;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    transition: 0.25s ease-in-out;
+    overflow: hidden;
+}
+
+.image-col {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+
+.image {
+    display: inline-block;
+    
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+/* Three image containers */
+.column {
+    float: left;
+    width: 31.6%;
+    padding: 6px;
+    margin: 1px;
+  }
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.text-col {
+    padding: 2em;
+}
+
+.center {
+    text-align: center;
+}
+
+.product-column {
+    float: left;
+    width: 15%;
+    padding: 30px;
+    margin: 18px;
+  }
+
+/* Clear floats after image containers */
+.product-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+button {
+    background-color: black;
+    color: white;
+}
+
+.label {
+    background-color:skyblue;
+}
+
+@media screen and (max-width:1023px) {
+	.container {
+		width:100%;
+        flex-flow: row wrap;
+	}
+    .column {
+        display: block;
+        width: 31.6%;
+    }
+    .product-column {
+        display: block;
+        width: 15%; 
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .product-column {
+        width: 100%; 
+        display: block;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .container {
+        width: 320px;
+        flex-flow: row wrap;
+    }
+}
